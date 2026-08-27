@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Quadro de Tarefas Acadêmicas</title>
 </head>
 
 <body>
@@ -13,12 +14,12 @@
         <p>Gerenciador de tarefas de projetos acadêmicos.</p>
     </header>
 
-    <main>
+    <main class="page-shell">
 
-        <section aria-labelledby="titulo-busca-filtros">
+        <section class="filters" aria-labelledby="titulo-busca-filtros">
             <h2 id="titulo-busca-filtros">Busca e filtros</h2>
 
-            <form>
+            <form class="filter-form">
                 <div>
                     <label for="busca">Buscar tarefa por título:</label>
                     <input type="search" id="busca" name="busca">
@@ -82,108 +83,108 @@
             </form>
         </section>
 
-        <section aria-labelledby="titulo-quadro">
+        <section class="board" aria-labelledby="titulo-quadro">
             <h2 id="titulo-quadro">Quadro de tarefas</h2>
 
-            <section aria-labelledby="titulo-a-fazer">
+            <section class="board-column status-todo" aria-labelledby="titulo-a-fazer">
                 <h3 id="titulo-a-fazer">A fazer</h3>
 
-                <ul>
-                    <li>
-                        <article>
-                            <h4>Implementar tela de login</h4>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <article class="task-card">
+                            <h4 class="task-title">Implementar tela de login</h4>
                             <p><strong>Projeto:</strong> Sistema Acadêmico</p>
                             <p><strong>Responsável:</strong> Ana Silva</p>
-                            <p><strong>Prazo:</strong> 20/08/2026</p>
-                            <p><strong>Prioridade:</strong> Alta</p>
+                            <p class="task-deadline"><strong>Prazo:</strong> 20/08/2026</p>
+                            <p class="task-priority priority-high"><strong>Prioridade:</strong> Alta</p>
                         </article>
                     </li>
 
-                    <li>
-                        <article>
-                            <h4>Modelar banco de dados</h4>
+                    <li class="task-item">
+                        <article class="task-card">
+                            <h4 class="task-title">Modelar banco de dados</h4>
                             <p><strong>Projeto:</strong> Sistema Acadêmico</p>
                             <p><strong>Responsável:</strong> João Santos</p>
-                            <p><strong>Prazo:</strong> 22/08/2026</p>
-                            <p><strong>Prioridade:</strong> Média</p>
+                            <p class="task-deadline"><strong>Prazo:</strong> 22/08/2026</p>
+                            <p class="task-priority priority-medium"><strong>Prioridade:</strong> Média</p>
                         </article>
                     </li>
                 </ul>
             </section>
 
-            <section aria-labelledby="titulo-em-andamento">
+            <section class="board-column status-progress" aria-labelledby="titulo-em-andamento">
                 <h3 id="titulo-em-andamento">Em andamento</h3>
 
-                <ul>
-                    <li>
-                        <article>
-                            <h4>Desenvolver página inicial</h4>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <article class="task-card">
+                            <h4 class="task-title">Desenvolver página inicial</h4>
                             <p><strong>Projeto:</strong> Portal Universitário</p>
                             <p><strong>Responsável:</strong> Carlos Oliveira</p>
-                            <p><strong>Prazo:</strong> 18/08/2026</p>
-                            <p><strong>Prioridade:</strong> Alta</p>
+                            <p class="task-deadline"><strong>Prazo:</strong> 18/08/2026</p>
+                            <p class="task-priority priority-high"><strong>Prioridade:</strong> Alta</p>
                         </article>
                     </li>
 
-                    <li>
-                        <article>
-                            <h4>Criar documentação da API</h4>
+                    <li class="task-item">
+                        <article class="task-card">
+                            <h4 class="task-title">Criar documentação da API</h4>
                             <p><strong>Projeto:</strong> API de Biblioteca</p>
                             <p><strong>Responsável:</strong> Mariana Costa</p>
-                            <p><strong>Prazo:</strong> 25/08/2026</p>
-                            <p><strong>Prioridade:</strong> Baixa</p>
+                            <p class="task-deadline"><strong>Prazo:</strong> 25/08/2026</p>
+                            <p class="task-priority priority-low"><strong>Prioridade:</strong> Baixa</p>
                         </article>
                     </li>
                 </ul>
             </section>
 
-            <section aria-labelledby="titulo-em-revisao">
+            <section class="board-column status-review" aria-labelledby="titulo-em-revisao">
                 <h3 id="titulo-em-revisao">Em revisão</h3>
 
-                <ul>
-                    <li>
-                        <article>
-                            <h4>Revisar formulário de cadastro</h4>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <article class="task-card">
+                            <h4 class="task-title">Revisar formulário de cadastro</h4>
                             <p><strong>Projeto:</strong> Portal Universitário</p>
                             <p><strong>Responsável:</strong> Lucas Almeida</p>
-                            <p><strong>Prazo:</strong> 16/08/2026</p>
-                            <p><strong>Prioridade:</strong> Média</p>
+                            <p class="task-deadline"><strong>Prazo:</strong> 16/08/2026</p>
+                            <p class="task-priority priority-medium"><strong>Prioridade:</strong> Média</p>
                         </article>
                     </li>
 
-                    <li>
-                        <article>
-                            <h4>Testar autenticação de usuários</h4>
+                    <li class="task-item">
+                        <article class="task-card">
+                            <h4 class="task-title">Testar autenticação de usuários</h4>
                             <p><strong>Projeto:</strong> Sistema Acadêmico</p>
                             <p><strong>Responsável:</strong> Beatriz Lima</p>
-                            <p><strong>Prazo:</strong> 19/08/2026</p>
-                            <p><strong>Prioridade:</strong> Alta</p>
+                            <p class="task-deadline"><strong>Prazo:</strong> 19/08/2026</p>
+                            <p class="task-priority priority-high"><strong>Prioridade:</strong> Alta</p>
                         </article>
                     </li>
                 </ul>
             </section>
 
-            <section aria-labelledby="titulo-concluida">
+            <section class="board-column status-done" aria-labelledby="titulo-concluida">
                 <h3 id="titulo-concluida">Concluída</h3>
 
-                <ul>
-                    <li>
-                        <article>
-                            <h4>Definir requisitos do sistema</h4>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <article class="task-card">
+                            <h4 class="task-title">Definir requisitos do sistema</h4>
                             <p><strong>Projeto:</strong> Sistema Acadêmico</p>
                             <p><strong>Responsável:</strong> Pedro Martins</p>
-                            <p><strong>Prazo:</strong> 10/08/2026</p>
-                            <p><strong>Prioridade:</strong> Alta</p>
+                            <p class="task-deadline"><strong>Prazo:</strong> 10/08/2026</p>
+                            <p class="task-priority priority-high"><strong>Prioridade:</strong> Alta</p>
                         </article>
                     </li>
 
-                    <li>
-                        <article>
-                            <h4>Criar protótipo inicial</h4>
+                    <li class="task-item">
+                        <article class="task-card">
+                            <h4 class="task-title">Criar protótipo inicial</h4>
                             <p><strong>Projeto:</strong> Portal Universitário</p>
                             <p><strong>Responsável:</strong> Juliana Rocha</p>
-                            <p><strong>Prazo:</strong> 12/08/2026</p>
-                            <p><strong>Prioridade:</strong> Baixa</p>
+                            <p class="task-deadline"><strong>Prazo:</strong> 12/08/2026</p>
+                            <p class="task-priority priority-low"><strong>Prioridade:</strong> Baixa</p>
                         </article>
                     </li>
                 </ul>
