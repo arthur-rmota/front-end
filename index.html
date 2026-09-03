@@ -15,12 +15,11 @@
     </header>
 
     <main class="page-shell">
-
         <section class="filters" aria-labelledby="titulo-busca-filtros">
             <h2 id="titulo-busca-filtros">Busca e filtros</h2>
 
             <form class="filter-form">
-                <div>
+                <div class="filter-search">
                     <label for="busca">Buscar tarefa por título:</label>
                     <input type="search" id="busca" name="busca">
                     <button type="submit">Buscar</button>
@@ -33,22 +32,18 @@
                         <input type="radio" id="status-todos" name="status" value="todos">
                         <label for="status-todos">Todos</label>
                     </div>
-
                     <div>
                         <input type="radio" id="status-fazer" name="status" value="a-fazer">
                         <label for="status-fazer">A fazer</label>
                     </div>
-
                     <div>
                         <input type="radio" id="status-andamento" name="status" value="em-andamento">
                         <label for="status-andamento">Em andamento</label>
                     </div>
-
                     <div>
                         <input type="radio" id="status-revisao" name="status" value="em-revisao">
                         <label for="status-revisao">Em revisão</label>
                     </div>
-
                     <div>
                         <input type="radio" id="status-concluida" name="status" value="concluida">
                         <label for="status-concluida">Concluída</label>
@@ -62,17 +57,14 @@
                         <input type="radio" id="prioridade-todas" name="prioridade" value="todas">
                         <label for="prioridade-todas">Todas</label>
                     </div>
-
                     <div>
                         <input type="radio" id="prioridade-baixa" name="prioridade" value="baixa">
                         <label for="prioridade-baixa">Baixa</label>
                     </div>
-
                     <div>
                         <input type="radio" id="prioridade-media" name="prioridade" value="media">
                         <label for="prioridade-media">Média</label>
                     </div>
-
                     <div>
                         <input type="radio" id="prioridade-alta" name="prioridade" value="alta">
                         <label for="prioridade-alta">Alta</label>
@@ -86,117 +78,18 @@
         <section class="board" aria-labelledby="titulo-quadro">
             <h2 id="titulo-quadro">Quadro de tarefas</h2>
 
-            <section class="board-column status-todo" aria-labelledby="titulo-a-fazer">
-                <h3 id="titulo-a-fazer">A fazer</h3>
+            <div id="status-regiao" role="status" aria-live="polite"></div>
+            <p id="mensagem-estado" class="sr-only"></p>
 
-                <ul class="task-list">
-                    <li class="task-item">
-                        <article class="task-card">
-                            <h4 class="task-title">Implementar tela de login</h4>
-                            <p><strong>Projeto:</strong> Sistema Acadêmico</p>
-                            <p><strong>Responsável:</strong> Ana Silva</p>
-                            <p class="task-deadline"><strong>Prazo:</strong> 20/08/2026</p>
-                            <p class="task-priority priority-high"><strong>Prioridade:</strong> Alta</p>
-                        </article>
-                    </li>
-
-                    <li class="task-item">
-                        <article class="task-card">
-                            <h4 class="task-title">Modelar banco de dados</h4>
-                            <p><strong>Projeto:</strong> Sistema Acadêmico</p>
-                            <p><strong>Responsável:</strong> João Santos</p>
-                            <p class="task-deadline"><strong>Prazo:</strong> 22/08/2026</p>
-                            <p class="task-priority priority-medium"><strong>Prioridade:</strong> Média</p>
-                        </article>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="board-column status-progress" aria-labelledby="titulo-em-andamento">
-                <h3 id="titulo-em-andamento">Em andamento</h3>
-
-                <ul class="task-list">
-                    <li class="task-item">
-                        <article class="task-card">
-                            <h4 class="task-title">Desenvolver página inicial</h4>
-                            <p><strong>Projeto:</strong> Portal Universitário</p>
-                            <p><strong>Responsável:</strong> Carlos Oliveira</p>
-                            <p class="task-deadline"><strong>Prazo:</strong> 18/08/2026</p>
-                            <p class="task-priority priority-high"><strong>Prioridade:</strong> Alta</p>
-                        </article>
-                    </li>
-
-                    <li class="task-item">
-                        <article class="task-card">
-                            <h4 class="task-title">Criar documentação da API</h4>
-                            <p><strong>Projeto:</strong> API de Biblioteca</p>
-                            <p><strong>Responsável:</strong> Mariana Costa</p>
-                            <p class="task-deadline"><strong>Prazo:</strong> 25/08/2026</p>
-                            <p class="task-priority priority-low"><strong>Prioridade:</strong> Baixa</p>
-                        </article>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="board-column status-review" aria-labelledby="titulo-em-revisao">
-                <h3 id="titulo-em-revisao">Em revisão</h3>
-
-                <ul class="task-list">
-                    <li class="task-item">
-                        <article class="task-card">
-                            <h4 class="task-title">Revisar formulário de cadastro</h4>
-                            <p><strong>Projeto:</strong> Portal Universitário</p>
-                            <p><strong>Responsável:</strong> Lucas Almeida</p>
-                            <p class="task-deadline"><strong>Prazo:</strong> 16/08/2026</p>
-                            <p class="task-priority priority-medium"><strong>Prioridade:</strong> Média</p>
-                        </article>
-                    </li>
-
-                    <li class="task-item">
-                        <article class="task-card">
-                            <h4 class="task-title">Testar autenticação de usuários</h4>
-                            <p><strong>Projeto:</strong> Sistema Acadêmico</p>
-                            <p><strong>Responsável:</strong> Beatriz Lima</p>
-                            <p class="task-deadline"><strong>Prazo:</strong> 19/08/2026</p>
-                            <p class="task-priority priority-high"><strong>Prioridade:</strong> Alta</p>
-                        </article>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="board-column status-done" aria-labelledby="titulo-concluida">
-                <h3 id="titulo-concluida">Concluída</h3>
-
-                <ul class="task-list">
-                    <li class="task-item">
-                        <article class="task-card">
-                            <h4 class="task-title">Definir requisitos do sistema</h4>
-                            <p><strong>Projeto:</strong> Sistema Acadêmico</p>
-                            <p><strong>Responsável:</strong> Pedro Martins</p>
-                            <p class="task-deadline"><strong>Prazo:</strong> 10/08/2026</p>
-                            <p class="task-priority priority-high"><strong>Prioridade:</strong> Alta</p>
-                        </article>
-                    </li>
-
-                    <li class="task-item">
-                        <article class="task-card">
-                            <h4 class="task-title">Criar protótipo inicial</h4>
-                            <p><strong>Projeto:</strong> Portal Universitário</p>
-                            <p><strong>Responsável:</strong> Juliana Rocha</p>
-                            <p class="task-deadline"><strong>Prazo:</strong> 12/08/2026</p>
-                            <p class="task-priority priority-low"><strong>Prioridade:</strong> Baixa</p>
-                        </article>
-                    </li>
-                </ul>
-            </section>
-
+            <div class="board-grid"></div>
         </section>
-
     </main>
 
     <footer>
         <p>Arthur Rodrigues Mota</p>
     </footer>
+
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>

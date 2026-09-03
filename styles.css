@@ -192,9 +192,40 @@ button[type="submit"] {
 
 /* ---- Quadro: Grid nas colunas de status ---- */
 .board-grid {
-  display: block;
+  display: grid;
   grid-template-columns: 1fr; /* mobile-first: uma coluna, empilhado */
-  gap: var(--space-mg);
+  gap: var(--space-md);
+}
+
+
+#status-regiao {
+  min-height: 1.5rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-muted);
+}
+
+#mensagem-estado {
+  margin: 0 0 var(--space-sm);
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.estado-painel {
+  grid-column: 1 / -1;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+}
+
+.estado-painel h3,
+.estado-painel p {
+  margin: 0;
+}
+
+.estado-painel p {
+  margin-top: var(--space-xs);
+  color: var(--color-text-muted);
 }
 
 /* ---- Cada coluna: Flexbox em direção vertical ---- */
@@ -229,7 +260,7 @@ button[type="submit"] {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm); /* gap no lugar de margin entre os cartões */
+  gap: var(--space-md); /* gap no lugar de margin entre os cartões */
 }
 
 /* ---- Cartão de tarefa ---- */

@@ -1,0 +1,76 @@
+{
+  "tarefas": [
+    {
+      "id": 1,
+      "titulo": "Implementar tela de login",
+      "status": "a-fazer",
+      "prioridade": "alta",
+      "prazo": "20/08/2026",
+      "projeto": "Sistema Acadêmico",
+      "responsavel": "Ana Silva"
+    },
+    {
+      "id": 2,
+      "titulo": "Modelar banco de dados",
+      "status": "a-fazer",
+      "prioridade": "media",
+      "prazo": "22/08/2026",
+      "projeto": "Sistema Acadêmico",
+      "responsavel": "João Santos"
+    },
+    {
+      "id": 3,
+      "titulo": "Desenvolver página inicial",
+      "status": "em-andamento",
+      "prioridade": "alta",
+      "prazo": "18/08/2026",
+      "projeto": "Portal Universitário",
+      "responsavel": "Carlos Oliveira"
+    },
+    {
+      "id": 4,
+      "titulo": "Criar documentação da API",
+      "status": "em-andamento",
+      "prioridade": "baixa",
+      "prazo": "25/08/2026",
+      "projeto": "API de Biblioteca",
+      "responsavel": "Mariana Costa"
+    },
+    {
+      "id": 5,
+      "titulo": "Revisar formulário de cadastro",
+      "status": "em-revisao",
+      "prioridade": "media",
+      "prazo": "16/08/2026",
+      "projeto": "Portal Universitário",
+      "responsavel": "Lucas Almeida"
+    },
+    {
+      "id": 6,
+      "titulo": "Testar autenticação de usuários",
+      "status": "em-revisao",
+      "prioridade": "alta",
+      "prazo": "19/08/2026",
+      "projeto": "Sistema Acadêmico",
+      "responsavel": "Beatriz Lima"
+    },
+    {
+      "id": 7,
+      "titulo": "Definir requisitos do sistema",
+      "status": "concluida",
+      "prioridade": "alta",
+      "prazo": "10/08/2026",
+      "projeto": "Sistema Acadêmico",
+      "responsavel": "Pedro Martins"
+    },
+    {
+      "id": 8,
+      "titulo": "Criar protótipo inicial",
+      "status": "concluida",
+      "prioridade": "baixa",
+      "prazo": "12/08/2026",
+      "projeto": "Portal Universitário",
+      "responsavel": "Juliana Rocha"
+    }
+  ]
+}
