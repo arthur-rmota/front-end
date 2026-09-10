@@ -29,7 +29,7 @@
                     <legend>Filtrar por status</legend>
 
                     <div>
-                        <input type="radio" id="status-todos" name="status" value="todos">
+                        <input type="radio" id="status-todos" name="status" value="todos" checked>
                         <label for="status-todos">Todos</label>
                     </div>
                     <div>
@@ -54,7 +54,7 @@
                     <legend>Filtrar por prioridade</legend>
 
                     <div>
-                        <input type="radio" id="prioridade-todas" name="prioridade" value="todas">
+                        <input type="radio" id="prioridade-todas" name="prioridade" value="todas" checked>
                         <label for="prioridade-todas">Todas</label>
                     </div>
                     <div>
@@ -70,6 +70,15 @@
                         <label for="prioridade-alta">Alta</label>
                     </div>
                 </fieldset>
+
+                <div class="filter-order">
+                    <label for="ordenacao">Ordenar por prazo:</label>
+                    <select id="ordenacao" name="ordenacao">
+                        <option value="nenhuma" selected>Sem ordenação</option>
+                        <option value="prazo-asc">Prazo mais próximo primeiro</option>
+                        <option value="prazo-desc">Prazo mais distante primeiro</option>
+                    </select>
+                </div>
 
                 <button type="reset">Limpar filtros</button>
             </form>

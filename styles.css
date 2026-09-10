@@ -146,6 +146,34 @@ fieldset {
   margin: 0;
 }
 
+.filter-order {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.filter-order label {
+  font-size: 0.9375rem;
+}
+
+.filter-order select {
+  font: inherit;
+  font-size: 1rem;
+  padding: var(--space-xs) var(--space-sm);
+  min-height: 2.75rem; /* mesmo alvo de toque confortável dos demais campos */
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+@media (min-width: 30em) {
+  .filter-order {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
 legend {
   padding: 0 var(--space-2xs);
   font-weight: 600;
@@ -273,6 +301,7 @@ button[type="submit"] {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: var(--space-sm);
+  cursor: pointer;
 }
 
 .task-title {
@@ -305,6 +334,16 @@ button[type="submit"] {
   border-top: 1px solid var(--color-border);
   color: var(--color-text);
   font-size: 0.875rem;
+}
+
+/* estado puramente visual, alternado por clique (delegado no quadro) */
+.task-card--selecionado {
+  border-color: var(--color-status-progress);
+  box-shadow: 0 0 0 2px var(--color-status-progress);
+}
+
+.estado-sem-resultados {
+  border-left: 4px solid var(--color-status-review);
 }
 
 /* ==========================================================================
